@@ -61,16 +61,18 @@ public class BiblioTab extends Bibliotheque {
                  JOptionPane.PLAIN_MESSAGE));
 		Ouvrage unOuvrage= rechercherOuvrage(num);
 		if(unOuvrage != null) {
-			for(int i=0; i < this.tailleMax-1; i++) {
-				if(this.biblio[i] == unOuvrage) {
-					for(int j=i; j < this.tailleMax-1; j++) {
-						this.biblio[j]= this.biblio[j+1];
-					}
-					break;
-				}
+			int i= 0;
+			while(this.biblio[i] != unOuvrage) {
+				i++;
 			}
+			this.biblio[i]= null;
 			this.compteur--;
 			cles.remove(num);
+			while(i+1 < this.tailleMax) {
+				this.biblio[i]= this.biblio[i+1];
+				this.biblio[i+1]= null;
+				i++;
+			}
 			msg= "Ouvrage supprime";
 		}else {
 			msg= "Ouvrage inexistant";
