@@ -3,22 +3,20 @@ import java.io.*;
 public class RechercheSeq {
 
 	
-	public void methode1() {
+	public static void methode1() {
 		int i = 1;
 		int j = 0;
 		try {
 		i = i / j;
 		} catch(ArithmeticException e) {
-			e.printStackTrace(); // affiche la trace d'exécution
-			System.out.println("exception attrapée");
+			e.printStackTrace(); // affiche la trace d'exï¿½cution
+			System.out.println("exception attrapï¿½e");
 		}
 	}
 	
-	public static void main(String[] args) {
-		
-		
-		
+	public static void main(String[] args) {	
 			methode1();
 			System.exit(0);
+	}
 
 }
