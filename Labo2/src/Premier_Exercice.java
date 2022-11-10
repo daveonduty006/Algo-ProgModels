@@ -1,5 +1,5 @@
 
-public class Exercice1 {
+public class Premier_Exercice {
 		
 	  /*
 	  Algorithme récursif résoudant le problème des Tours d'Hanoï
@@ -32,10 +32,17 @@ public class Exercice1 {
     	// nous allons évidemment structurer notre code selon le principe 
     	// fondamental de la récursion: la diminution de notre input (ici 'N').
     	// Notre plus gros input ici est 3 (le disque 3), nous allons donc 
-    	// écrire notre code pour que nous implémentions le premier mouvement
-    	// du disque 3 en premier récursivement.
+    	// écrire notre code pour que nous implémentions le prochain mouvement (au départ 
+    	// le premier mouvement) du disque 3 en premier récursivement. Il sera la base de 
+    	// notre pile grandissante, laquelle comportera également le prochain 
+    	// (donc même chose au départ le premier) mouvement du disque 2 au milieu de la pile et 
+    	// finalement le prochain mouvement du disque 1, ce dernier étant au sommet de la pile 
+    	// et sera donc notre premier print de la partie.
+    	
     	// Notre premier appel à toursDeHanoi sera donc:
         toursDeHanoi(N, 'A', 'C', 'B');
+        // car le premier mouvement (et le seul avec un jeu de 3 disque) du plus gros disque 
+        // N (3) doit former le premier appel à toursDeHanoi. 
     }
     
 	public static void toursDeHanoi(int n, 
