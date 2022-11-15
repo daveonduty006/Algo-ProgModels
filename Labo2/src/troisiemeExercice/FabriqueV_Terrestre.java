@@ -1,10 +1,15 @@
 package troisiemeExercice;
 
-public class FabriqueV_Terrestre extends FabriqueDeVehicules {
+public class FabriqueV_Terrestre implements FabriqueAbstraite<VehiculeTerrestre> {
 
 	@Override
-	public Vehicule creerVehicule() {
-		return (new VehiculeTerrestre());
+	public VehiculeTerrestre creer(String typeSousVehicule) {
+		if("Auto".equalsIgnoreCase(typeSousVehicule)) {
+			return (new Auto());
+		}else if("Bicyclette".equalsIgnoreCase(typeSousVehicule)) {
+			return (new Bicyclette());
+		}
+		return null;
 	}
 
 }

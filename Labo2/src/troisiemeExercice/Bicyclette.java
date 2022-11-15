@@ -1,15 +1,15 @@
 package troisiemeExercice;
 
-public class Auto extends VehiculeTerrestre {
+public class Bicyclette extends VehiculeTerrestre {
 
 	@Override
 	int getNbRoues() {
-		return 4;
+		return 2;
 	}
 
 	@Override
 	String getSousTypeVehicule() {
-		return "auto";
+		return "bicyclette";
 	}
-	
+
 }

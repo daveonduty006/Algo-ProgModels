@@ -1,35 +1,18 @@
 package troisiemeExercice;
 
-public abstract class VehiculeTerrestre extends Vehicule {
+public abstract class VehiculeTerrestre implements Vehicule {
 	
-	private int nbRoues;
-	private String couleur, modele, fabricant;
-	
-	VehiculeTerrestre(int nbRoues, String couleur, String fabricant, String modele) {
-		this.nbRoues = nbRoues;
-		this.couleur = couleur;
-		this.fabricant = fabricant;
-		this.modele = modele;
+	abstract int getNbRoues();
+	abstract String getSousTypeVehicule();
+
+	@Override
+	public String getTypeVehicule() {
+		return "vehicule terrestre";
 	}
-	
-	public int getNbRoues() {
-		return this.nbRoues;
-	}
-	
-	public String getCouleur() {
-		return this.couleur;
-	}
-	
-	public String getFabricant() {
-		return this.fabricant;
-	}
-	
-	public String getModele() {
-		return this.modele;
-	}
-		
-	public String toString() {
-		return "Je suis un Véhicule Terrestre donc je roule!";
+
+	@Override
+	public String getCaption() {
+		return "Je suis un "+getTypeVehicule()+" donc je roule!";
 	}
 	
 }

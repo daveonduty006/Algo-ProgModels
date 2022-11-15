@@ -1,7 +1,8 @@
 package troisiemeExercice;
 
-public abstract class Vehicule {
+public interface Vehicule {
 	
-    public abstract String toString();
+    String getTypeVehicule();
+    String getCaption();
    
 }
