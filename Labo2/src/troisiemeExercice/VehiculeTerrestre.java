@@ -12,7 +12,7 @@ public abstract class VehiculeTerrestre implements Vehicule {
 
 	@Override
 	public String getCaption() {
-		return "Je suis un "+getTypeVehicule()+" donc je roule!";
+		return "Je suis un "+getTypeVehicule()+" donc je me déplace sur la terre!";
 	}
 	
 }

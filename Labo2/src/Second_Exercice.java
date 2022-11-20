@@ -30,14 +30,18 @@ public class Second_Exercice {
 	private static void mergeSort(int[] array) {
 		
 		int length = array.length;
-		if (length <= 1) return; //base case
+		
+		// condition d'arrêt
+		if (length <= 1) {
+			return;
+		}
 		
 		int middle = length / 2;
 		int[] leftArray = new int[middle];
 		int[] rightArray = new int[length - middle];
 		
-		int i = 0; //left array
-		int j = 0; //right array
+		int i = 0; // index du tableau gauche
+		int j = 0; // index du tableau droite
 		
 		for(; i < length; i++) {
 			if(i < middle) {
@@ -57,9 +61,10 @@ public class Second_Exercice {
 		
 		int leftSize = array.length / 2;
 		int rightSize = array.length - leftSize;
-		int i = 0, l = 0, r = 0; //indices
+		// Nos indices
+		int i = 0, l = 0, r = 0; 
 		
-		//check the conditions for merging
+		// On verifie les conditions pour le merge
 		while(l < leftSize && r < rightSize) {
 			if(leftArray[l] < rightArray[r]) {
 				array[i] = leftArray[l];
