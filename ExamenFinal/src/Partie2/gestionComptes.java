@@ -2,14 +2,14 @@ package Partie2;
 
 public class gestionComptes {
 	
-	public static journalisation uneJournalisation = journalisation.getJournalisation(); // on récupère le singleton de la classe journalisation
+	public static journalisation uneJournalisation = journalisation.getJournalisation(); // on recupere le singleton de la classe journalisation
 
 	public static void main(String[] args) {
 		
-		 compteBancaire compte123 = new compteBancaire(123); // création des comptes 
+		 compteBancaire compte123 = new compteBancaire(123); // creation des comptes 
 		 compteBancaire compte321 = new compteBancaire(321);
 		 
-		 compte123.deposerArgent(100);                                      // opérations dans les comptes
+		 compte123.deposerArgent(100);                                      // operations dans les comptes
 		 journalisation.ajouterLog("depot de 100$ dans le compte 123");
 		 compte123.retirerArgent(80);
 		 journalisation.ajouterLog("retrait de 80$ dans le compte 123");
